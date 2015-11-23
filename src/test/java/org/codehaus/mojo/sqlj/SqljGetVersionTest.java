@@ -6,9 +6,6 @@ import org.junit.Test;
 
 /**
  * Unit test for {@link SqljMojo}.
- * 
- * @author finx
- * @since Nov 11, 2015
  */
 public class SqljGetVersionTest extends PlexusTestCase {
 
@@ -21,7 +18,7 @@ public class SqljGetVersionTest extends PlexusTestCase {
 	 */
 	@Test
 	public void testGetVersion() throws Exception {
-		Verifier verifier = new Verifier(getBasedir() + "/target/test-classes/sqlj-getversion/");
+		Verifier verifier = new Verifier(getBasedir());
 		verifier.executeGoal("sqlj:sqlj");
 		verifier.verifyErrorFreeLog();
 		verifier.verifyTextInLog("Using SQLJ Translator version");
