@@ -18,7 +18,7 @@ public class SqljGetVersionTest extends PlexusTestCase {
 	 */
 	@Test
 	public void testGetVersion() throws Exception {
-		Verifier verifier = new Verifier(getBasedir());
+		Verifier verifier = new Verifier(getBasedir() + "/target/test-classes/sqlj-getversion/");
 		verifier.executeGoal("sqlj:sqlj");
 		verifier.verifyErrorFreeLog();
 		verifier.verifyTextInLog("Using SQLJ Translator version");
